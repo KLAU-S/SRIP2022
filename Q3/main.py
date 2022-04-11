@@ -48,6 +48,7 @@ def forward_pass(params, in_array):
     for w, b in params[:-1]:
         activations = relu_layer([w, b], activations)
 
+        
     # Perform final trafo to logits
     final_w, final_b = params[-1]
     logits = np.dot(final_w, activations) + final_b
